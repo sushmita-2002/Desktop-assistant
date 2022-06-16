@@ -177,6 +177,17 @@ if __name__ == "__main__":
         elif 'the time' in query:
             time=datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"The time is{time}")
+            
+        elif 'capital' in query:
+            speak('Which state capital you want to know')
+            query = take()
+            result = capital(query)
+            
+        elif 'month' in query or 'month is going' in query:
+            tell_month()
+
+        elif 'day' in query or 'today' in query:
+            tell_day()
          
     
             

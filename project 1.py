@@ -174,6 +174,18 @@ if __name__ == "__main__":
         elif 'open amazon' in query:
             webbrowser.open("amazon.com")
             
+        elif 'open whatsapp' in query:
+            webbrowser.open("whatsapp.com")
+            
+        elif 'open stack overflow' in query:
+            webbrowser.open("stackoverflow.com")
+            
+        elif 'open notepad' in query:
+            os.startfile("C:\\Windows\\notepad.exe")
+            
+        elif 'close notepad' in query:
+            os.system("TASKKILL /F /IM notepad.exe")
+            
         elif 'the time' in query:
             time=datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"The time is{time}")
@@ -188,6 +200,20 @@ if __name__ == "__main__":
 
         elif 'day' in query or 'today' in query:
             tell_day()
+            
+        elif 'shut down' in query:
+            print("Do you want to shutdown you system?")
+            speak("Do you want to shutdown you system?")
+            cmd = take()
+            if 'yes' in cmd:
+                os.system("shutdown /s /t 1")
+                
+        elif 'restart' in query:
+            print("Do you want to restart your system?")
+            speak("Do you want to restart your system?")
+            cmd = take()
+            if 'yes' in cmd:
+                os.system("shutdown /r /t 1")
          
     
             

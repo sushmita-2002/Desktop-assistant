@@ -24,82 +24,6 @@ def wish():
     else:
         speak('I hope you enjoyed whole day ')
     speak('I am Sushmita desktop assitant. how I help you')
-    
-def capital(state):
-    if state=='Andhra Pradesh':
-        speak('Amaravati')
-    elif state=='Arunachal Pradesh':
-        speak('Itanagar')
-    elif state=='Assam':
-        speak('Dispur')
-    elif state=='Bihar':
-        speak('Patna')
-    elif state=='Chhattisgarh':
-        speak('Raipur')
-    elif state=='Goa':
-        speak('Panaji')
-    elif state=='Gujarat':
-        speak('Gandhinagar')
-    elif state=='Haryana':
-        speak('Chandigarh')
-    elif state=='Himachal Pradesh':
-        speak('Shimla')
-    elif state=='Jharkhand':
-        speak('Ranchi')
-    elif state=='Karnataka':
-        speak('Bengaluru')
-    elif state=='Kerala':
-        speak('Thiruvananthapuram')
-    elif state=='Madhya Pradesh':
-        speak('Bhopal')
-    elif state=='Maharashtra':
-        speak('Mumbai')
-    elif state=='Manipur':
-        speak('Imphal')
-    elif state=='Meghalaya':
-        speak('Shillong')
-    elif state=='Mizoram':
-        speak('Aizawl')
-    elif state=='Nagaland':
-       speak('Kohima')
-    elif state=='Odisha':
-        speak('Bhubaneswar')
-    elif state=='Punjab':
-        speak('Chandigarh')
-    elif state=='Rajasthan':
-        speak('Jaipur')
-    elif state=='Sikkim':
-       speak('Gangtok')
-    elif state=='Tamil Nadu':
-        speak('Chennai')
-    elif state=='Telangana':
-        speak('Hyderabad')
-    elif state=='Tripura':
-        speak('Agartala')
-    elif state=='Uttar Pradesh':
-        speak('Lucknow')
-    elif state=='Uttarakhand':
-        speak('Dehradun in Winter and Gairsain in Summer')
-    elif state=='West Bengal':
-        speak('West Bengal')
-    elif state=='Andaman and Nicobar Islands':
-        speak('Andaman and Nicobar Islands')
-    elif state=='Dadra & Nagar Haveli and Daman & Diu':
-        speak('Daman')
-    elif state=='Delhi':
-        speak('Delhi')
-    elif state=='Jammu and Kashmir':
-        speak('Srinagar in Summer and Jammu in Winter')
-    elif state=='Lakshadweep':
-        speak('Kavaratti')
-    elif state=='Puducherry':
-        speak('Pondicherry')
-    elif state=='Ladakh':
-        speak('Leh')
-    elif state=='India':
-        speak('New Delhi')
-    else:
-        speak('Please say that again...')
 
 def tell_month():
     dt = datetime.datetime.today()
@@ -189,11 +113,6 @@ if __name__ == "__main__":
         elif 'the time' in query:
             time=datetime.datetime.now().strftime("%H:%M:%S")
             speak(f"The time is{time}")
-            
-        elif 'capital' in query:
-            speak('Which state capital you want to know')
-            query = take()
-            result = capital(query)
             
         elif 'month' in query or 'month is going' in query:
             tell_month()
